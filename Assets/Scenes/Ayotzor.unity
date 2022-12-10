@@ -104905,7 +104905,7 @@ Camera:
     serializedVersion: 2
     m_Bits: 1024
   m_RenderingPath: -1
-  m_TargetTexture: {fileID: 8400000, guid: 66fc6721bfe30924ca231ebbd95ea385, type: 2}
+  m_TargetTexture: {fileID: 8400000, guid: 6a509d6a7dce0af43b9bc46e57194459, type: 2}
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
@@ -104975,8 +104975,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 068991350b90331469b3595a1c613b30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  icon: {fileID: 0}
-  transitionCollider: {fileID: 0}
+  target: {x: 0, y: 0, z: 0}
+  player: {fileID: 0}
+  pointerTransform: {fileID: 0}
 --- !u!212 &517445878
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -106945,7 +106946,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 8400000, guid: 66fc6721bfe30924ca231ebbd95ea385, type: 2}
+  m_Texture: {fileID: 8400000, guid: 6a509d6a7dce0af43b9bc46e57194459, type: 2}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -140651,8 +140652,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 068991350b90331469b3595a1c613b30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  icon: {fileID: 0}
-  transitionCollider: {fileID: 0}
+  target: {x: 0, y: 0, z: 0}
+  player: {fileID: 0}
+  pointerTransform: {fileID: 0}
 --- !u!212 &2096050201
 SpriteRenderer:
   m_ObjectHideFlags: 0
