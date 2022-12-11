@@ -80,7 +80,7 @@ public class SceneEntering : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
         transitionAnimation = GameObject.FindGameObjectWithTag("Transition").GetComponent<Animator>();
-        village = Enum.Parse<Village>(SceneManager.GetActiveScene().name);
+        if (SceneManager.GetActiveScene().name != "InsideHouse") village = Enum.Parse<Village>(SceneManager.GetActiveScene().name);
         loadCollider = GetComponent<Collider2D>();
     }
 
