@@ -196,6 +196,8 @@ MonoBehaviour:
   damageArea: 1.2
   player: {fileID: 0}
   rock: {fileID: 8619844426367540276, guid: 62cd28e1168ff064eac3d43557fd685d, type: 3}
+  dropObjects:
+  - {fileID: 1320320496653595142, guid: 6b7c0f2b092384c4c9f05ccd5998348e, type: 3}
   attackCooldown: 0.5
 --- !u!50 &5707305290750549787
 Rigidbody2D:

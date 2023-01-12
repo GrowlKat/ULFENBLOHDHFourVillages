@@ -10,7 +10,11 @@ public class Player : MonoBehaviour
     public PlayerStats localStats;
     public static PlayerStats stats;
 
+    public Inventory inventory;
+    public int currentLunarWaters;
+
     public static bool isAttacking;
+    public bool isFalling = false;
     public bool canMove;
     public bool canAttack;
     public bool canDodge;
@@ -68,6 +72,11 @@ public class Player : MonoBehaviour
             StartCoroutine(Attack(attackCooldown));
         }
 
+        if (inventory.lunarWaters.Count > 0 && Input.GetKeyDown(KeyCode.Z) && stats.life < stats.maxLife)
+        {
+            inventory.lunarWaters.Pop().Use();
+        }
+
         // Pauses the game if Escape is pressed, and deactivates it if pressed again
         if (Input.GetKeyDown(KeyCode.Escape) && !exiting && !MainQuest.victoryTransition) paused = !paused;
         Time.timeScale = paused || exiting ? 0 : 1;
@@ -78,6 +87,7 @@ public class Player : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space)) StartCoroutine(ToMainMenu());
         }
+        currentLunarWaters = inventory.lunarWaters.Count;
     }
 
     private void FixedUpdate()
@@ -96,7 +106,7 @@ public class Player : MonoBehaviour
         // direction and sets a cartesian value to the animator
         if (canMove)
         {
-            if(Input.GetKey(KeyCode.W))
+            if (Input.GetKey(KeyCode.W))
             {
                 transform.position += new Vector3(0, 1f * speed * Time.deltaTime, 0);
                 playerAnim.SetBool("moving", true);

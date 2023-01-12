@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
@@ -19,8 +20,11 @@ public class NaturGolem : MonoBehaviour
 
     public GameObject player;
     public GameObject rock;
+    public List<GameObject> dropObjects;
+    
     public float attackCooldown;
     private bool isAttacking = false;
+    private Dictionary<string, GameObject> drops = new();
 
     void Start()
     {
@@ -30,6 +34,7 @@ public class NaturGolem : MonoBehaviour
         initialPosition = transform.position;
         target = initialPosition;
         enemyPhysics = GetComponent<Rigidbody2D>();
+        foreach (var o in dropObjects) drops.Add(o.name, o);
     }
 
     private void Update()
@@ -143,5 +148,15 @@ public class NaturGolem : MonoBehaviour
 
         // Notifies the enemy is not attacking
         isAttacking = false;
+    }
+
+    private void OnDestroy()
+    {
+        float result = Random.value;
+        //GameObject gameObject = null;
+        //print(result + " " + transform.position);
+
+        if (result < 0.5f) Instantiate(drops["LunarWater"], transform.position, transform.rotation);
+        //if (gameObject is not null) print(gameObject.transform.position);
     }
 }
