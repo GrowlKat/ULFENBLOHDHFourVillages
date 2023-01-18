@@ -186,19 +186,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f6c008c8a19e7d40b4b8f1929453723, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  localStats:
+  stats:
+    mainElement: 7
+    secondElement: 4
     life: 60
-    maxLife: 100
+    maxLife: 60
     attack: 20
+    defense: 0
+    eldryz: 0
+    maxEldryz: 0
+    stamina: 0
+    maxStamina: 0
+  dodgeLayer: 2
   speed: 3
   visionRadius: 4
   attackRadius: 2.5
   damageArea: 1.2
-  player: {fileID: 0}
-  rock: {fileID: 8619844426367540276, guid: 62cd28e1168ff064eac3d43557fd685d, type: 3}
   dropObjects:
   - {fileID: 1320320496653595142, guid: 6b7c0f2b092384c4c9f05ccd5998348e, type: 3}
   attackCooldown: 0.5
+  canMove: 1
+  beingAttacked: 0
+  rock: {fileID: 8619844426367540276, guid: 62cd28e1168ff064eac3d43557fd685d, type: 3}
 --- !u!50 &5707305290750549787
 Rigidbody2D:
   serializedVersion: 4

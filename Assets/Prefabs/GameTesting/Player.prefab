@@ -124,18 +124,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localStats:
+    mainElement: 6
+    secondElement: 3
     life: 200
-    maxLife: 100
+    maxLife: 200
     attack: 20
+    defense: 0
+    eldryz: 0
+    maxEldryz: 0
+    stamina: 0
+    maxStamina: 0
+  dodgeLayer: 2
+  inventory:
+    maxLunarWaters: 3
+  currentLunarWaters: 0
+  isFalling: 0
   canMove: 0
   canAttack: 0
-  canDodge: 0
+  canDodge: 1
   speed: 5
   attackCooldown: 0.14
   attackTrigger: {fileID: 2253338895370970321}
-  jumpCooldown: 0.5
-  rollCooldown: 0.5
-  dashCooldown: 0.5
+  jumpCooldown: 0.3
+  rollCooldown: 0.3
+  dashCooldown: 0.2
   currentCD: 0
   timeAfterKey: 0
 --- !u!50 &2253338894353262748

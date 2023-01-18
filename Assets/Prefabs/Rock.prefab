@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6811308308769275880}
   - component: {fileID: 251899221273224073}
   - component: {fileID: 9005862609903924036}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Body
   m_TagString: Enemy Attack
   m_Icon: {fileID: 0}
@@ -83,7 +83,7 @@ GameObject:
   - component: {fileID: 8619844426367540283}
   - component: {fileID: 8549297921707912227}
   - component: {fileID: -9027632098273729934}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Rock
   m_TagString: Enemy Attack
   m_Icon: {fileID: 0}
@@ -171,9 +171,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbbf034730938c74aaf9491d2a816692, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stats:
+    mainElement: 0
+    secondElement: 0
+    life: 100
+    maxLife: 100
+    attack: 20
+    defense: 0
+    eldryz: 0
+    maxEldryz: 0
+    stamina: 0
+    maxStamina: 0
+  dodgeLayer: 0
   speed: 4
-  atk: 0
-  rockChecker: {fileID: 8549297921707912227}
+  visionRadius: 3.5
+  attackRadius: 2.5
+  damageArea: 1
+  dropObjects: []
+  attackCooldown: 0
+  canMove: 1
+  beingAttacked: 0
 --- !u!58 &8549297921707912227
 CircleCollider2D:
   m_ObjectHideFlags: 0
